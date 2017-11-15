@@ -14,5 +14,15 @@ I have employed the Strategy Method Pattern whilst designing the :
 To implement the Factory Method I have a GeneticFactory class which has a few abstract methods, namely selectionChoice, crossoverChoice. The subclasses of GeneticFactory are where the choices are made. And these subclasses, configOne and configTwo, will implement the different versions of Selection and Crossover relevant for their implementation.
 Inside each of these config classes, I have the if else conditionals which will change the returned types of classes depending on the user input. These classes each have their own version of elite and roulette selection. They also have their own versions of the crossover methods onepoint and twopoint. Each version of these is aptly named with a One or Two at the end of the class names. Just for showing which one is called depending on the class they are called from. 
 
-I have yet to do the Strategy Method. But I will look into this now over the next few days and try to implement it . 
+ 
 I have the factory method & singleton pattern covered. As well with showing some info hiding/encapsulation. I will try to make sure I am doing Abstraction.(I believe I am )
+I have polymorphism employed (shown in GARunner with GeneticFactory config1 = new configOne();)
+I am using exisiting libraries -> only one for now with Map in Population. 
+Multiple-file is being done. I have classes and subclasses implemented. 
+Generics used with the Object style1 = config1.doProcess(...);
+
+
+Next:
+I have yet to do the Strategy Method. But I will look into this now over the next few days and try to implement it .
+Do some form of mutation maybe. 
+Add in some concrete method/varibales into Selection & Crossover classes. Just to be able to show I understand how they can be useful. 

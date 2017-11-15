@@ -25,7 +25,7 @@ public class GARunner{
 		GeneticFactory config2 = new configTwo();
 		System.out.println("\nDoing config2 of GA generation with elite selection and 1 point crossover.");
 		Object style4 = config2.doProcess("elite",1);
-		System.out.print(style4.toString());//-> this give a NullPointerException. Wonder if I can catch it.Later
+		//System.out.print(style4.toString());//-> this give a NullPointerException. Wonder if I can catch it.Later
 	
 	}
 	
