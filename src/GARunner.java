@@ -21,6 +21,12 @@ public class GARunner{
 		Object style2 =config1.doProcess("roulette", 1);
 		System.out.println("\nDoing config1 of GA generation with roulette selection and 2 point crossover.");
 		Object style3 =config1.doProcess("roulette", 2);
+		System.out.println("\nNow doing config2 style of selection and crossover.");
+		GeneticFactory config2 = new configTwo();
+		System.out.println("\nDoing config2 of GA generation with elite selection and 1 point crossover.");
+		Object style4 = config2.doProcess("elite",1);
+		System.out.print(style4.toString());//-> this give a NullPointerException. Wonder if I can catch it.Later
+	
 	}
 	
 }

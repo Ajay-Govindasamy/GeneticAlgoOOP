@@ -2,18 +2,18 @@
  * Tihs class is a subclass of the generic type Selection. It is a specific version of elite selection that is
  * implemented by the configOne class. It is its own style of doing elite selection
  * It implements its own version of the performSelection() method.
- * This is for configOne class
+ * This is for configTwo class
  * @author Ian Dempsey, 12383546
  *
  */
 
-public class rouletteSelectionOne extends Selection {
+public class rouletteSelectionTwo extends Selection {
 	/*
-	 * The constructor which is called in the configOne class will call the overwritten performSelection() method here.
+	 * The constructor which is called in the configTwo class will call the overwritten performSelection() method here.
 	 * This could be done by say having class variables in Selection itself, i.e. name, status, etc. 
 	 * But for simplicity I am just having print stmts here to it. 
 	 */
-	public rouletteSelectionOne() {
+	public rouletteSelectionTwo() {
 		performSelection();
 	}
 	/**
@@ -22,7 +22,7 @@ public class rouletteSelectionOne extends Selection {
 	 * This does not mean smaller candidates do not have a chance though
 	 */
 	public void performSelection() {
-		System.out.println("\nStarting the roulette selection for configuration 1.");
+		System.out.println("\nStarting the roulette selection for configuration 2.");
 		System.out.println("Randomly choosing candidate for future population.");
 		System.out.println("Selected.\n");
 	}
