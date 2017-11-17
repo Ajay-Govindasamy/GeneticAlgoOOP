@@ -29,5 +29,17 @@ public class configOne extends GeneticFactory {
 			return new twoPointCrossoverOne();
 		}else return null;
 	}
+	
+	/*
+	 * This mutationChance will call the biased style 10% of the time. 
+	 * 
+	 */
+	protected void mutationChance() {
+		// TODO Auto-generated method stub
+		double num = Math.random()*2;
+		if(num<=0.2) {
+			new mutateBias();
+		}
+	}
 
 }

@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * This is the second subclass of the GeneticFactory. This is the second configuration of implementing a GA. 
  * Here we have two abstract methods implemented, selectionChoice and crossoverChoice. 
@@ -29,6 +31,16 @@ public class configTwo extends GeneticFactory {
 		}else if(numCross == 2) {
 			return new twoPointCrossoverTwo();
 		}else return null;
+	}
+	/**
+	 * The mutationChance here is just the normal type of mutation. It has a 10% chance of being called.
+	 */
+	protected void mutationChance() {
+		// TODO Auto-generated method stub
+		double num = Math.random();
+		if(num<0.1) {
+			new mutateNorm();
+		}
 	}
 
 }
