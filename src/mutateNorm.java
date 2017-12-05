@@ -1,5 +1,5 @@
 /**
- * This is one way to do mutation, which is just pure random. It is a subclass of the Mutation abstract class.
+ * This is one way to do mutation, which is just pure random. It is a subclass of the Mutation interface.
  * @author Ian Dempsey
  *
  */

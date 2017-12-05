@@ -16,7 +16,6 @@ public abstract class GeneticFactory {
 		 return select;
 	}*/
 	/**
-	 * Update this to have Generics inputted! 
 	 * Main method, depending on the configuration that was instantiated in GARunner, it will call
 	 * specific methods styled for that configuration.
 	 * @param type
@@ -24,10 +23,8 @@ public abstract class GeneticFactory {
 	 * @return Object
 	 */
 	public Object doProcess(String type, int numCross){
-		Selection select;
-		select = selectionChoice(type);
-		Crossover cross;
-		cross = crossoverChoice(numCross);
+		Selection select = selectionChoice(type);
+		Crossover cross = crossoverChoice(numCross);
 		mutationChance();
 		return null;
 	}

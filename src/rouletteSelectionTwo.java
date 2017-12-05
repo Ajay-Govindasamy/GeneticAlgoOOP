@@ -1,5 +1,5 @@
 /**
- * Tihs class is a subclass of the generic type Selection. It is a specific version of elite selection that is
+ * This class is a subclass of the interface Selection. It is a specific version of elite selection that is
  * implemented by the configOne class. It is its own style of doing elite selection
  * It implements its own version of the performSelection() method.
  * This is for configTwo class

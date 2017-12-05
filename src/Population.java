@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+*Try to make this Generic.
 *
 *This is my Population class. It employs the Singleton Pattern. 
 *The reason I use this pattern here is so that I only have 1 instance of my population. 

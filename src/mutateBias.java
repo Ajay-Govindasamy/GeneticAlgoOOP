@@ -1,6 +1,6 @@
 /**
  * This is one way to do mutation, which always picks the last 2 bits to mutate. 
- * It is a subclass of the Mutation abstract class.
+ * It is a subclass of the Mutation interface.
  * @author Ian Dempsey
  *
  */

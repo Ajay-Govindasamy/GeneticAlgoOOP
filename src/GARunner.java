@@ -7,7 +7,7 @@
 *This configOne will take in the same input as the configTwo type, 
 *BUT it will be able to decide at runtime which type of selection, crossover and mutation process to implement.
 *I have a number of instances created here to show their different outputs. 
-*In the case were a user inputs something which does not exist, I throw an throw new IllegalArgumentException.
+*In the case where a user inputs something which does not exist, I throw an throw new IllegalArgumentException.
 *@author Ian Dempsey
 */
 

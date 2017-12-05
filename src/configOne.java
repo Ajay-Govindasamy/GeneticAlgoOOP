@@ -5,6 +5,7 @@
  * This class has access to only it's own style of the elite, roulette selections. And also its own version
  * of the crossovers. Also mutation is performed randomly.
  * For configTwo I have implemented its own version of these that are specific for this configuration.
+ * I have the case where a user inputs some arguments which are illegal taken care of.
  * @author Ian Dempsey
  *
  */
