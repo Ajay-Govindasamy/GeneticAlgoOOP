@@ -1,5 +1,5 @@
 /**
- * This is my abstract class. It is the generic version of the different types of crossover: 1pt, 2pt.
+ * This is my interface. It is the super version of the different types of crossover: 1pt, 2pt.
  * This class will be extended by the subclasses and implement their own versions of this.
  * Some methods in here:
  *  doCrossover() -> abstract method which implements the different types of crossover actually performed in each class
