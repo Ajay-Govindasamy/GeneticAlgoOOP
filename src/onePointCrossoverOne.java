@@ -15,7 +15,7 @@ public class onePointCrossoverOne extends Crossover {
 		doCrossover();
 	}
 	
-	public void doCrossover() {
+	protected void doCrossover() {
 		// TODO Auto-generated method stub
 		System.out.println("Performing 1 point crossover for config1's selection population.");
 		System.out.println("Selecting bits to crossover.");

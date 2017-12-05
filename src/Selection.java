@@ -10,5 +10,5 @@ public abstract class Selection {
 	/*
 	 * This method will be fully defined in each subclass of Selection.
 	 */
-	public abstract void performSelection();
+	protected abstract void performSelection();
 }

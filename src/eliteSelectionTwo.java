@@ -21,7 +21,7 @@ public class eliteSelectionTwo extends Selection {
 	 * They are then chosen based on this. Candidates at the top have a higher chance of being picked.
 	 * @see Selection#performSelection()
 	 */
-	public void performSelection() {
+	protected void performSelection() {
 		// TODO Auto-generated method stub
 		System.out.println("\nStarting the elite selection for configuration 2.");
 		System.out.println("Sorting the candidates from Smallest to Biggest.");

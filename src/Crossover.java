@@ -11,5 +11,5 @@ public abstract class Crossover {
 	/**
 	 * This class will perform the crossover. It is abstract so all other classes must do this method.
 	 */
-	public abstract void doCrossover();
+	protected abstract void doCrossover();
 }

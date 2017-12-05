@@ -1,4 +1,3 @@
-import java.util.Random;
 
 /**
  * This is the second subclass of the GeneticFactory. This is the second configuration of implementing a GA. 
@@ -7,7 +6,8 @@ import java.util.Random;
  * This class has access to only it's own style of the elite, roulette selections. And also its own version
  * of the crossovers.
  * For configTwo here I have implemented its own version of these that are specific for this configuration.
- * These are denoted by the word Two at the end of each class , i.e. eliteSelectionTwo()
+ * These are denoted by the word Two at the end of each class , i.e. eliteSelectionTwo().
+ * Mutation is also implemented below.
  * @author Ian Dempsey
  *
  */
