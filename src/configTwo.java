@@ -20,7 +20,7 @@ public class configTwo extends GeneticFactory {
 			return new eliteSelectionTwo();
 		}else if (type.equals("roulette")) {
 			return new rouletteSelectionTwo();
-		}else return null;
+		}else throw new IllegalArgumentException("Illegal Argument" + type);
 	}
 
 	
@@ -30,7 +30,7 @@ public class configTwo extends GeneticFactory {
 			
 		}else if(numCross == 2) {
 			return new twoPointCrossoverTwo();
-		}else return null;
+		}else throw new IllegalArgumentException("Illegal Argument" + numCross);
 	}
 	/**
 	 * The mutationChance here is just the normal type of mutation. It has a 10% chance of being called.

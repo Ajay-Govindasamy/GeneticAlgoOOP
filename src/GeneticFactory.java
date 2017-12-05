@@ -9,7 +9,7 @@
  *
  * @param <T>
  */
-public abstract class GeneticFactory<T> {
+public abstract class GeneticFactory {
 	/*public Selection doSelection(String type) {
 		Selection select;
 		 select = selectionChoice(type);

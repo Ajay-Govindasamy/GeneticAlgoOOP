@@ -17,7 +17,7 @@ public class configOne extends GeneticFactory {
 			return new eliteSelectionOne();
 		}else if (type.equals("roulette")) {
 			return new rouletteSelectionOne();
-		}else return null;
+		}else throw new IllegalArgumentException("Illegal Argument" + type);
 	}
 
 	
@@ -27,7 +27,7 @@ public class configOne extends GeneticFactory {
 			
 		}else if(numCross == 2) {
 			return new twoPointCrossoverOne();
-		}else return null;
+		}else throw new IllegalArgumentException("Illegal Argument" + numCross);
 	}
 	
 	/*
