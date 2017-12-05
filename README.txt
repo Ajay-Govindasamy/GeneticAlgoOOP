@@ -24,3 +24,4 @@ Mutation is done. I have two styles of mutation which can be called by the confi
 
 Next:
 Add in some concrete method/variables into Selection & Crossover classes. Just to be able to show I understand how they can be useful. -> This might not need to be done if I am using interfaces instead of Abstract classes for them. 
+Make the population generic maybe. 
