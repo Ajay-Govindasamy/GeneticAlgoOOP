@@ -3,7 +3,7 @@
  * Here we have two abstract methods implemented, selectionChoice and crossoverChoice. 
  * These methods will decide at runtime what type of class to generate, depending on the input from the client.
  * This class has access to only it's own style of the elite, roulette selections. And also its own version
- * of the crossovers.
+ * of the crossovers. Also mutation is performed randomly.
  * For configTwo I have implemented its own version of these that are specific for this configuration.
  * @author Ian Dempsey
  *
