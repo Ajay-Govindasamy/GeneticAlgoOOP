@@ -7,7 +7,7 @@
  *
  */
 
-public class rouletteSelectionOne extends Selection {
+public class rouletteSelectionOne implements Selection {
 	/*
 	 * The constructor which is called in the configOne class will call the overwritten performSelection() method here.
 	 * This could be done by say having class variables in Selection itself, i.e. name, status, etc. 

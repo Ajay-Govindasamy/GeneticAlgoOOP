@@ -6,9 +6,9 @@
  * @author Ian Dempsey, 12383546
  *
  */
-public abstract class Selection {
+public interface Selection {
 	/*
 	 * This method will be fully defined in each subclass of Selection.
 	 */
-	protected abstract void performSelection();
+	abstract void performSelection();
 }

@@ -7,9 +7,9 @@
  * @author Ian Dempsey, 12383546
  * date: 15/11/17
  */
-public abstract class Crossover {
+public interface Crossover {
 	/**
 	 * This class will perform the crossover. It is abstract so all other classes must do this method.
 	 */
-	protected abstract void doCrossover();
+	 void doCrossover();
 }

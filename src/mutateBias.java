@@ -4,7 +4,7 @@
  * @author Ian Dempsey
  *
  */
-public class mutateBias extends Mutation{
+public class mutateBias implements Mutation{
 	public mutateBias() {
 		mutate();
 	}

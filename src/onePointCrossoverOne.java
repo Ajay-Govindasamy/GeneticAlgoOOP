@@ -5,7 +5,7 @@
  * @author Ian Dempsey, 12383546
  *
  */
-public class onePointCrossoverOne extends Crossover {
+public class onePointCrossoverOne implements Crossover {
 	/*
 	 * The constructor which is called in the configOne class will call the overwritten doCrossover() method here.
 	 * This could be done by say having class variables in Crossover itself, i.e. name, status, etc. 
@@ -15,7 +15,7 @@ public class onePointCrossoverOne extends Crossover {
 		doCrossover();
 	}
 	
-	protected void doCrossover() {
+	 public void doCrossover() {
 		// TODO Auto-generated method stub
 		System.out.println("Performing 1 point crossover for config1's selection population.");
 		System.out.println("Selecting bits to crossover.");

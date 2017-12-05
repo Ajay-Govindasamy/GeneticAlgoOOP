@@ -5,7 +5,7 @@
  * @author Ian Dempsey, 12383546
  *
  */
-public class eliteSelectionOne extends Selection {
+public class eliteSelectionOne implements Selection {
 	/*
 	 * The constructor which is called in the configOne class will call the overwritten performSelection() method here.
 	 * This could be done by say having class variables in Selection itself, i.e. name, status, etc. 
@@ -20,7 +20,7 @@ public class eliteSelectionOne extends Selection {
 	 * They are then chosen based on this. Candidates at the top have a higher chance of being picked.
 	 * @see Selection#performSelection()
 	 */
-	protected void performSelection() {
+	public void performSelection() {
 		// TODO Auto-generated method stub
 		System.out.println("\nStarting the elite selection for configuration 1.");
 		System.out.println("Sorting the candidates from Biggest to Smallest.");

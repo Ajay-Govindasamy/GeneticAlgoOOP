@@ -3,7 +3,7 @@
  * @author Ian Dempsey
  *
  */
-public abstract class Mutation {
+public interface  Mutation {
 
 	public abstract void mutate();
 }

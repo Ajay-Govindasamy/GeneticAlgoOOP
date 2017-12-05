@@ -3,7 +3,7 @@
  * @author Ian Dempsey
  *
  */
-public class mutateNorm extends Mutation {
+public class mutateNorm implements Mutation {
 	
 	public mutateNorm() {
 		mutate();
