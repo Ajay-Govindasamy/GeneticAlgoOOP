@@ -4,15 +4,15 @@ import java.util.Map;
 import java.util.Set;
 
 /**
-*Try to make this Generic.
-*
 *This is my Population class. It employs the Singleton Pattern. 
 *The reason I use this pattern here is so that I only have 1 instance of my population. 
 *This allows for better concurrency across my program, as every class is working on the same population. 
 *This allows for my program to be working on the same data. 
+*The generics are shown inside this class by having the Map. 
+*Further option to have Generics used is by having generatePopulation() be able to generate anytype of Map.
+*This would allow the user to generate a Population of <?,?>, i.e. <String,String>,<Integer,Character>, etc.
 *@author: Ian Dempsey, 12383546
-*@date 10/11/17
-*
+*date 10/11/17
 */
 
 public class Population{
@@ -29,9 +29,6 @@ public class Population{
 		return uniquePop;
 	}
 	
-	//some other methods. Might need something like:
-	//checkPop() -> checks that it is valid in some way. Maybe if something is in it or not. If it is in it, then update that positionafter selection?
-	//also generatePopulation()-> called in the constructor above
 	/**
 	 * This method will generate the population of the private global variable pop.
 	 * Declared as private for encapsulation and information hiding purposes.
@@ -48,7 +45,7 @@ public class Population{
 		return genPop;
 	}
 	/**
-	 * This method will just print out the populaiton, it was used whilst testing this code.
+	 * This method will just print out the population, it was used whilst testing this code.
 	 */
 	public String toString() {
 		Set<Character> setPop = pop.keySet();//keys are characters

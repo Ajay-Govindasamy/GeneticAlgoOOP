@@ -5,33 +5,63 @@
  * Also, for the specific style of configuration setup for the GA, a type of mutation is called. 
  * Each type of mutation, selection and crossover is specific to the type of configuration chosen. 
  * Also includes 3 abstract methods. These are implemented in the subclasses, configOne, configTwo.
+ * I have instance variables to hold the classes which are generated inside doProcess(...).
+ * These can be obtained via getters.
  * @author Ian Dempsey
- *
- * @param <T>
  */
 public abstract class GeneticFactory {
-	/*public Selection doSelection(String type) {
-		Selection select;
-		 select = selectionChoice(type);
-		 return select;
-	}*/
+	Selection select;
+	Crossover cross;
+	Mutation mutate;
 	/**
 	 * Main method, depending on the configuration that was instantiated in GARunner, it will call
 	 * specific methods styled for that configuration.
-	 * @param type
-	 * @param numCross
+	 * @param String type the type of Selection to perform
+	 * @param int numCross the type of crossover to perform.
+	 * @param Population p, the Population to be worked on. 
 	 * @return Object
 	 */
-	public Object doProcess(String type, int numCross){
-		Selection select = selectionChoice(type);
-		Crossover cross = crossoverChoice(numCross);
-		mutationChance();
+	public Object doProcess(String type, int numCross, Population p){
+		select = selectionChoice(type,p);
+		cross = crossoverChoice(numCross,p);
+		mutate=mutationChance(p);
 		return null;
 	}
-	//This is the abstract method, it will be subclassed by all relevant configs. And alter to suit their needs.
-	protected abstract Selection selectionChoice(String type);
 	
-	protected abstract Crossover crossoverChoice(int numCross);
+	public Selection getSelection() {
+		return select;
+	}
+	public Crossover getCrossover() {
+		return cross;
+	}
+	public Mutation getMutation() {
+		return mutate;
+	}
+
+	/**
+	 * This method is defined in all relevant configs. 
+	 * Each one alters this to suit their needs.
+	 * @param type
+	 * @param p
+	 * @return Selection
+	 */
+	protected abstract Selection selectionChoice(String type,Population p);
 	
-	protected abstract void mutationChance();
+	/**
+	 * This method is defined in all relevant configs. 
+	 * Each one alters this to suit their needs.
+	 * @param type
+	 * @param p
+	 * @return Crossover
+	 */
+	protected abstract Crossover crossoverChoice(int numCross, Population p);
+	
+	/**
+	 * This method is defined in all relevant configs. 
+	 * Each one alters this to suit their needs.
+	 * @param type
+	 * @param p
+	 * @return Mutation
+	 */
+	protected abstract Mutation mutationChance(Population p);
 }

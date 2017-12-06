@@ -9,38 +9,49 @@
  * @author Ian Dempsey
  *
  */
-public class configOne extends GeneticFactory {
-
+public class ConfigOne extends GeneticFactory {
+	private Population p;
 	
-	protected Selection selectionChoice(String type) {
+	/**
+	 * This method will generate a new class of one of the crossover classes that are for this Config setup.
+	 * @param String type, Population p
+	 * @return Selection
+	 */
+	protected Selection selectionChoice(String type,Population p) {
 		// TODO Auto-generated method stub
 		if(type.equals("elite")) {
-			return new eliteSelectionOne();
+			return new EliteSelectionOne(p);
 		}else if (type.equals("roulette")) {
-			return new rouletteSelectionOne();
+			return new RouletteSelectionOne(p);
 		}else throw new IllegalArgumentException("Illegal Argument" + type);
 	}
 
-	
-	protected Crossover crossoverChoice(int numCross) {
+	/**
+	 * crossoverChoice() will generate a new class of one of the crossover classes that are for this Config setup.
+	 * @param int numCross the type of crossover to be done. Population p
+	 * @return a Crossover object
+	 */
+	protected Crossover crossoverChoice(int numCross, Population p) {
 		if(numCross == 1) {
-			return new onePointCrossoverOne();
+			return new OnePointCrossoverOne(p);
 			
 		}else if(numCross == 2) {
-			return new twoPointCrossoverOne();
+			return new TwoPointCrossoverOne(p);
 		}else throw new IllegalArgumentException("Illegal Argument" + numCross);
 	}
 	
-	/*
+	/**
 	 * This mutationChance will call the biased style 10% of the time. 
-	 * 
+	 * @param Population p
+	 * @return Mutation
 	 */
-	protected void mutationChance() {
+	protected Mutation mutationChance(Population p) {
 		// TODO Auto-generated method stub
 		double num = Math.random()*2;
 		if(num<=0.2) {
-			new mutateBias();
+			return new MutateBias(p);
 		}
+		return null;
 	}
 
 }

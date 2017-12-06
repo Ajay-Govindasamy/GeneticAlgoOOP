@@ -8,7 +8,7 @@ The basic idea of a GA is to:
 
 In my attempt to design some code around these core ideas of a GA. I have used some of the patterns learned throughout this CS613 class. 
 In particular I have used the Singleton Pattern when I am generating the Population. 
-I used the Factory Method whilst designing the Selection and Crossover parts of my code, and each of their subclasses take into account their roles in this style of pattern. 
+I used the Abstract Factory Method whilst designing the GeneticFactory and the two subclasses ConfigOne, ConfigTwo. 
 I have employed the Strategy Method Pattern whilst designing the Factory Method. This is the subsection where the Selection, Crossover and Mutation abstract classes are used with their subclasses. 
 
 To implement the Factory Method I have a GeneticFactory class which has a few abstract methods, namely selectionChoice, crossoverChoice and mutationChance. The subclasses of GeneticFactory are where the choices are made. And these subclasses, configOne and configTwo, will implement the different versions of Selection and Crossover relevant for their implementation.
@@ -19,7 +19,7 @@ I have the factory method & singleton pattern covered. As well with showing some
 I have polymorphism employed (shown in GARunner with: GeneticFactory config1 = new configOne();)
 I am using exisiting libraries -> Example with Map in Population. 
 Multiple-file is being done. I have classes and subclasses implemented. 
-Generics used with the Object style1 = config1.doProcess(...); -> Not really.
+Generics used with the Map inside Population.
 Mutation is done. I have two styles of mutation which can be called by the configs. Each config class can only call 1 style of mutation. This is because I only want the classes to have the chance to mutate in one style. If they could do both styles that would mean they would have a higher chance to mutate, one way or the other.
 
 Next:

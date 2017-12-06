@@ -5,21 +5,22 @@
  * @author Ian Dempsey, 12383546
  *
  */
-public class twoPointCrossoverOne implements Crossover {
+public class TwoPointCrossoverOne implements Crossover {
 	/*
 	 * The constructor which is called in the configOne class will call the overwritten doCrossover() method here.
 	 * This could be done by say having class variables in Crossover itself, i.e. name, status, etc. 
 	 * But for simplicity I am just having print stmts here to it. 
 	 */
-	public twoPointCrossoverOne() {
-		doCrossover();
+	public TwoPointCrossoverOne(Population p) {
+		doCrossover(p);
 	}
 	
-	public void doCrossover() {
+	public Population doCrossover(Population p) {
 		// TODO Auto-generated method stub
 		System.out.println("Performing 2 point crossover for configOne class");
 		System.out.println("Selecting bits to crossover");
 		System.out.println("Completed");
+		return p;
 	}
 
 }
