@@ -11,17 +11,21 @@ In particular I have used the Singleton Pattern when I am generating the Populat
 I used the Abstract Factory Method whilst designing the GeneticFactory and the two subclasses ConfigOne, ConfigTwo. 
 I have employed the Strategy Method Pattern whilst designing the Factory Method. This is the subsection where the Selection, Crossover and Mutation abstract classes are used with their subclasses. 
 
-To implement the Factory Method I have a GeneticFactory class which has a few abstract methods, namely selectionChoice, crossoverChoice and mutationChance. The subclasses of GeneticFactory are where the choices are made. And these subclasses, configOne and configTwo, will implement the different versions of Selection and Crossover relevant for their implementation.
+To implement the Factory Method with the GeneticFactory class which has a few abstract methods, namely selectionChoice, crossoverChoice and mutationChance. The subclasses of GeneticFactory are where the choices are made. And these subclasses, ConfigOne and ConfigTwo, will implement the different versions of Selection and Crossover relevant for their implementation. Mutation will happen based off of the random() method returning the value to call it. 
+
 Inside each of these config classes, I have the if else conditionals which will change the returned types of classes depending on the user input. These classes each have their own version of elite and roulette selection. They also have their own versions of the crossover methods onepoint and twopoint. Each version of these is aptly named with a One or Two at the end of the class names. Just for showing which one is called depending on the class they are called from. 
 Mutation is different in each class, and has the 1 in 10 chance of being called so it is random. 
  
-I have the factory method & singleton pattern covered. As well with showing some info hiding/encapsulation. I will try to make sure I am doing Abstraction.(I believe I am )
-I have polymorphism employed (shown in GARunner with: GeneticFactory config1 = new configOne();)
+As well with showing some info hiding/encapsulation.
+I have polymorphism employed (shown in GARunner with: GeneticFactory config1 = new ConfigOne();)
 I am using exisiting libraries -> Example with Map in Population. 
 Multiple-file is being done. I have classes and subclasses implemented. 
-Generics used with the Map inside Population.
+Generics used with the Map inside Population. I also have a comment on how it could be made Generic with my own Generics( i.e <T>)
 Mutation is done. I have two styles of mutation which can be called by the configs. Each config class can only call 1 style of mutation. This is because I only want the classes to have the chance to mutate in one style. If they could do both styles that would mean they would have a higher chance to mutate, one way or the other.
+I have also got the relevant areas in packages. This means I have to import all the relevant files from the other packages. 
+Abstraction is performed throughout by making each module of the program (each class) perform it's own distinct duty. 
+I have done my best to reuse code constantly and allow this to support the Open-Close Principle. 
+Each of the subclasses from Selection,Crossover and Mutation take in and return the Population. This is to allow the user when they input the actual logic of these areas to be able to work on the data from the Population itself. 
 
-Next:
-Add in some concrete method/variables into Selection & Crossover classes. Just to be able to show I understand how they can be useful. -> This might not need to be done if I am using interfaces instead of Abstract classes for them. 
-Make the population generic maybe. 
+
+NOTE: My github link for this project is: https://github.com/Demostroyer/GeneticAlgoOOP. It has all of the different versions of the project that I created.
