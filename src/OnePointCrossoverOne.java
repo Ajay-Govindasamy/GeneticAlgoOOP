@@ -16,8 +16,8 @@ public class OnePointCrossoverOne implements Crossover {
 	}
 	/**
 	 * This performs doCrossover() for ConfigOne and does OnePoint style.
-	 * @param Population p
-	 * @return Population
+	 * @param p the population to be worked on
+	 * @return Population the Population object
 	 */
 	 public Population doCrossover(Population p) {
 		// TODO Auto-generated method stub

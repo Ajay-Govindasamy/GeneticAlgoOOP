@@ -13,7 +13,7 @@ public class MutateNorm implements Mutation {
 	}
 	/**
 	 * This method performs the normal type of mutation, which is it occurs only 10% of the time.
-	 * @param p
+	 * @param p The population to be worked on
 	 * @return Population
 	 */
 	public Population mutate(Population p) {

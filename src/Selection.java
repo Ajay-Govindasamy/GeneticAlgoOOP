@@ -8,7 +8,7 @@
 public interface Selection {
 	/**
 	 *This method will be fully defined in each subclass of Selection. 
-	 * @param pop
+	 * @param pop the Population to be worked on.
 	 * @return Population object
 	 */
 	abstract Population performSelection(Population pop);

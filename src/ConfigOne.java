@@ -42,7 +42,7 @@ public class ConfigOne extends GeneticFactory {
 	
 	/**
 	 * This mutationChance will call the biased style 10% of the time. 
-	 * @param Population p
+	 * @param p The population to be worked on
 	 * @return Mutation
 	 */
 	protected Mutation mutationChance(Population p) {

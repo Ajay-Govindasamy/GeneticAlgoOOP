@@ -8,14 +8,14 @@
 public class MutateBias implements Mutation{
 	/**
 	 * This will call the actual mutate method on the population.
-	 * @param p
+	 * @param p. This is the Population being worked on
 	 */
 	public MutateBias(Population p) {
 		mutate(p);
 	}
 	/**
 	 * This method performs the biased type of mutation, which is it occurs only 10% of the time.
-	 * @param Population p.
+	 * @param p The population to be worked on.
 	 * @return Population
 	 */
 	public Population mutate(Population p) {

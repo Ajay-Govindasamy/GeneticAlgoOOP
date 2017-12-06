@@ -11,7 +11,7 @@ public class RouletteSelectionOne implements Selection {
 	 * The constructor which is called in the configOne class will call the overwritten performSelection() method here.
 	 * This could be done by say having class variables in Selection itself, i.e. name, status, etc. 
 	 * But for simplicity I am just having print stmts here to it. 
-	 * @param Population p
+	 * @param p The population to be worked on.
 	 */
 	public RouletteSelectionOne( Population p) {
 		performSelection(p);
@@ -20,7 +20,7 @@ public class RouletteSelectionOne implements Selection {
 	 * This roulette version works by assigning each candidate a portion of the wheel depending on their fitness level
 	 * The better their fitness value, the more of it they will have. Increasing their chances of being picked
 	 * This does not mean smaller candidates do not have a chance though
-	 * @param Population p
+	 * @param p The population to be worked on.
 	 * @return Population
 	 */
 	public Population performSelection(Population p) {

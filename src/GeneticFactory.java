@@ -16,9 +16,9 @@ public abstract class GeneticFactory {
 	/**
 	 * Main method, depending on the configuration that was instantiated in GARunner, it will call
 	 * specific methods styled for that configuration.
-	 * @param String type the type of Selection to perform
-	 * @param int numCross the type of crossover to perform.
-	 * @param Population p, the Population to be worked on. 
+	 * @param  type the type of Selection to perform
+	 * @param  numCross the type of crossover to perform.
+	 * @param  p, the Population to be worked on. 
 	 * @return Object
 	 */
 	public Object doProcess(String type, int numCross, Population p){

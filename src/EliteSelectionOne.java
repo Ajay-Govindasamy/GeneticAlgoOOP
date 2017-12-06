@@ -18,7 +18,7 @@ public class EliteSelectionOne implements Selection {
 	 * This version of select is the elite version. This is where the candidates are sorted on their fitness level first.
 	 * They are then chosen based on this. Candidates at the top have a higher chance of being picked.
 	 * see Selection#performSelection()
-	 * @param Population p
+	 * @param p the population to be worked on
 	 * @return Population
 	 */
 	public Population performSelection(Population p) {

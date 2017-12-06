@@ -10,7 +10,7 @@
 public interface Crossover {
 	/**
 	 * This class will perform the crossover. It is abstract so all other classes must do this method.
-	 * @param p
+	 * @param p the Population to be worked on
 	 * @return Population object
 	 */
 	abstract Population doCrossover(Population p);
