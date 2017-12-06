@@ -8,7 +8,7 @@
 public interface  Mutation {
 	/**
 	 * This method will be defined by all subclasses. 
-	 * @param p
+	 * @param p is the Population.
 	 * @return Population
 	 */
 	public abstract Population mutate(Population p);

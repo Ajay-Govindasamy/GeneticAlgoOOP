@@ -10,7 +10,7 @@ import java.util.Set;
 *This allows for my program to be working on the same data. 
 *The generics are shown inside this class by having the Map. 
 *Further option to have Generics used is by having generatePopulation() be able to generate anytype of Map.
-*This would allow the user to generate a Population of <?,?>, i.e. <String,String>,<Integer,Character>, etc.
+*This would allow the user to generate a Population of [?,?], i.e. [String,String], [Integer,Character], etc.
 *@author: Ian Dempsey, 12383546
 *date 10/11/17
 */

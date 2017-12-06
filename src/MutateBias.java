@@ -6,10 +6,18 @@
  *
  */
 public class MutateBias implements Mutation{
+	/**
+	 * This will call the actual mutate method on the population.
+	 * @param p
+	 */
 	public MutateBias(Population p) {
 		mutate(p);
 	}
-	
+	/**
+	 * This method performs the biased type of mutation, which is it occurs only 10% of the time.
+	 * @param Population p.
+	 * @return Population
+	 */
 	public Population mutate(Population p) {
 		System.out.println("\nDoing biased mutation.");
 		System.out.println("Selected the last bits to flip");

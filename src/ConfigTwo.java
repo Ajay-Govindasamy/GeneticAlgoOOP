@@ -1,4 +1,3 @@
-
 /**
  * This is the second subclass of the GeneticFactory. This is the second configuration of implementing a GA. 
  * Here we have two abstract methods implemented, selectionChoice and crossoverChoice. 
