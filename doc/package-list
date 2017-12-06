@@ -1,1 +1,6 @@
-
+GACrossover
+GAFactory
+GAMutation
+GAPopulation
+GARunner
+GASelection
