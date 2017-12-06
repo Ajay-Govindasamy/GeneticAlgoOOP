@@ -1,3 +1,46 @@
+To compile and run, please be just outside the src and bin folder. 
+How to compile and run my code:
+javac -d .\bin -cp .\bin .\src\GARunner\*.java .\src\GAPopulation\*.java .\src\GAFactory\*.java .\src\GACrossover\*.java .\src\GASelection\*.java .\src\GAMutation\*.java
+
+java -cp .\bin GARunner.GARunner
+
+Note: To compile you need to compile each class inside their respective package folder, and have it get any classes they need from the relevant bin folder. This is done using -cp .\bin. I also have the class files being put into their packages inside bin. 
+To run you need to make sure you use the package syntax for running which is the ".".
+
+
+Sample Ouput:
+A : 1
+B : 10
+C : 11
+D : 100
+......
+......
+......(continued on until Z)
+Doing config1 of GA generation with elite selection and 1 point crossover.
+
+Starting the elite selection for configuration 1.
+Sorting the candidates from Biggest to Smallest.
+Choosing the best 10 candidates in this group.
+10 Candidates selected
+
+Performing 1 point crossover for config1's selection population.
+Selecting bits to crossover.
+Completed.
+
+Crossover performed:GACrossover.OnePointCrossoverOne@6d06d69c, Selection performed:  GASelection.EliteSelectionOne@7852e922, Mutation performed: null
+
+The explanation of above is as follows:
+The first thing to be outputted a Print stmt stating what is to be performed. 
+This will be elite selection and 1 point crossover. So initally then elite Selection is performed.
+This will go down through the relevant classes of the Abstract Factory until it can create the eliteSelection class inside the relevant Config class. Once the correct elite Selection class is instantiated, this style of selection is performed. This will return the first block of the above printout. 
+
+A user also inputs that they want to perform 1 point crossover on the population. This is done again by going down through the Abstract Factory, and when inside the relevant Config class it will create the passed in type of Crossover. This will return the second block of the above printout which talks about Crossover. 
+
+The next line is just printing out the references to the objects which are created at runtime based on the users input.
+
+I have included different calls and versions of the above output. You can see them by uncommenting them from the GARunner class.
+
+
 The basic idea of a GA is to:
 1.Generate a population.
 2.Select candidates of this population for the future generation via some style of selection using a fitness evaluator.

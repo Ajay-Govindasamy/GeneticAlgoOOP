@@ -19,14 +19,13 @@ import GAFactory.*;
 public class GARunner{
 	public static void main(String...args) {
 		//This will return an instance of the class.
-		System.out.println("I am in this package version");
 		Population pop=Population.getInstance();
 		GeneticFactory config1 = new ConfigOne();
 		System.out.println("\nDoing config1 of GA generation with elite selection and 1 point crossover.");
 		Object style1 = config1.doProcess("elite",1,pop);
 		//This will get the crossover, selection and mutation that was created.
-		System.out.println("Crossover performed:"+config1.getCrossover() + ", Selection performed:  "+config1.getSelection() + ", Mutation performed: " + config1.getMutation());
-		//System.out.println("\nDoing config1 of GA generation with roulette selection and 1 point crossover.");
+		System.out.println("\nCrossover performed:"+config1.getCrossover() + ", Selection performed:  "+config1.getSelection() + ", Mutation performed: " + config1.getMutation());
+		System.out.println("\nDoing config1 of GA generation with roulette selection and 1 point crossover.");
 		Object style2 =config1.doProcess("roulette", 2,pop);
 		System.out.println(config1.getCrossover());//This will get the crossover that was created.
 		
