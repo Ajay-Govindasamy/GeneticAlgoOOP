@@ -20,9 +20,12 @@ public class GARunner{
 	public static void main(String...args) {
 		//This will return an instance of the class.
 		Population pop=Population.getInstance();
+		//System.out.println(pop.hashCode());
 		GeneticFactory config1 = new ConfigOne();
 		System.out.println("\nDoing config1 of GA generation with elite selection and 1 point crossover.");
 		Object style1 = config1.doProcess("elite",1,pop);
+		//Population pop2 = Population.getInstance();
+		//System.out.println(pop2.hashCode()); -> used for testing the Populations are equal.
 		//This will get the crossover, selection and mutation that was created.
 		System.out.println("\nCrossover performed:"+config1.getCrossover() + ", Selection performed:  "+config1.getSelection() + ", Mutation performed: " + config1.getMutation());
 		System.out.println("\nDoing config1 of GA generation with roulette selection and 1 point crossover.");
