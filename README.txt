@@ -50,9 +50,12 @@ The basic idea of a GA is to:
 
 
 In my attempt to design some code around these core ideas of a GA. I have used some of the patterns learned throughout this CS613 class. 
-In particular I have used the Singleton Pattern when I am generating the Population. 
+In particular I have used the Singleton Pattern when I am generating the Population. I used the eager implementation.
+
 I used the Abstract Factory Method whilst designing the GeneticFactory and the two subclasses ConfigOne, ConfigTwo. 
-I have employed the Strategy Method Pattern whilst designing the Factory Method. This is the subsection where the Selection, Crossover and Mutation abstract classes are used with their subclasses. This allows the user to be able to call different versions and have dynamic behaviour at runtime. This is seen in GARunner.  
+
+I have employed the Strategy Method Pattern whilst designing the Factory Method. This is the subsection where the Selection, Crossover and Mutation interfaces are used with their subclasses. This allows the user to be able to call different versions and have dynamic behaviour at runtime. This is seen in GARunner. The user can pass the strategy they wish to run when they are in the Runner with the line: Object style1 = config1.doProcess("elite",1,pop);
+The Strategies themselves are from the interfaces which are Selection,Crossover and Mutation. The user passes down what they want to use ('elite' from the line above this is the example) to the context for the strategy. The context is in the ConfigOne/ConfigTwo areas as they are the ones which decide which actual classes to call. So the strategies, which for example is Selection in this example, have a method which each concrete implementation must do. So by having the strategy 
 
 I implemented the Factory Method with the GeneticFactory class which has a few abstract methods, namely selectionChoice, crossoverChoice and mutationChance. The subclasses of GeneticFactory are where the choices are made. And these subclasses, ConfigOne and ConfigTwo, will implement the different versions of Selection and Crossover relevant for their implementation. Mutation will happen based off of the random() method returning the value to call it. 
 
@@ -70,5 +73,5 @@ Abstraction is performed throughout by making each module of the program (each c
 I have done my best to reuse code constantly and allow this to support the Open-Close Principle. 
 Open-Close Principle is employed in the cases where a user does not need to open the superclasses, but rather alter the subclasses, such as ConfigOne, ConfigTwo and MutationBias , etc.
 Each of the subclasses from Selection,Crossover and Mutation take in and return the Population. This is to allow the user when they input the actual logic of these areas to be able to work on the data from the Population itself. 
-
+There is also packages for each respective section. 
 NOTE: My github link for this project is: https://github.com/Demostroyer/GeneticAlgoOOP. It has all of the different versions of the project that I created.
