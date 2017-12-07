@@ -72,6 +72,6 @@ I have also got the relevant areas in packages. This means I have to import all 
 Abstraction is performed throughout by making each module of the program (each class) perform it's own distinct duty. 
 I have done my best to reuse code constantly and allow this to support the Open-Close Principle. 
 Open-Close Principle is employed in the cases where a user does not need to open the superclasses, but rather alter the subclasses, such as ConfigOne, ConfigTwo and MutationBias , etc.
-Each of the subclasses from Selection,Crossover and Mutation take in and return the Population. This is to allow the user when they input the actual logic of these areas to be able to work on the data from the Population itself. 
-There is also packages for each respective section. 
+Each of the subclasses from Selection,Crossover and Mutation take in and return the Population. This is to allow the user when they input the actual logic of these areas to be able to work on the data from the Population itself.  
+
 NOTE: My github link for this project is: https://github.com/Demostroyer/GeneticAlgoOOP. It has all of the different versions of the project that I created.
